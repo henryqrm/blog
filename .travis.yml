@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 5.4.0
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: 5.1.1
+before_script:
+	- bash ./travis/before_script.sh
+after_success:
+	- bash ./travis/after_success.sh
+services: mongodb
