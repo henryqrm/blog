@@ -6,6 +6,6 @@
 
         }
     }
-    angular.module('sampleApp.portifolio.contact.service')
+    angular.module('sampleApp.portifolio.contact.service',[])
     .service('PortifolioContactService', PortifolioContactService);
 })();

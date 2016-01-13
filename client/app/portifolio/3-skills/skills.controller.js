@@ -5,6 +5,6 @@
 
         }
     }
-    angular.module('sampleApp.portifolio.skills.controller')
+    angular.module('sampleApp.portifolio.skills.controller',[])
     .controller('PortifolioSkillCtrl', PortifolioSkillCtrl);
 })();

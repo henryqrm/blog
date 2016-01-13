@@ -5,6 +5,6 @@
 
         }
     }
-    angular.module('sampleApp.portifolio.home.controller')
+    angular.module('sampleApp.portifolio.home.controller',[])
     .controller('ProtifolioHomeCtrl', ProtifolioHomeCtrl);
 })();

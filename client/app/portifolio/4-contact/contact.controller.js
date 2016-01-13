@@ -6,6 +6,6 @@
 
         }
     }
-    angular.module('sampleApp.portifolio.contact.controller')
+    angular.module('sampleApp.portifolio.contact.controller',[])
     .controller('PortifolioContactCtrl', PortifolioContactCtrl);
 })();

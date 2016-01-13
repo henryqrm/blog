@@ -4,6 +4,7 @@ angular.module('sampleApp', [
   'sampleApp.auth',
   'sampleApp.admin',
   'sampleApp.constants',
+  'sampleApp.portifolio',
   'ngCookies',
   'ngResource',
   'ngSanitize',

@@ -5,6 +5,6 @@
 
         }
     }
-    angular.module('sampleApp.portifolio.profile.controller')
+    angular.module('sampleApp.portifolio.profile.controller',[])
     .controller('PortifolioProfileCtrl', PortifolioProfileCtrl);
 })();

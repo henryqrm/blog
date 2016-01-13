@@ -3,9 +3,8 @@
 (function(){
     class PortifolioCtrl {
         constructor() {
-
         }
     }
-    angular.module('sampleApp.controller')
+    angular.module('sampleApp.portifolio.controller',[])
     .controller('PortifolioCtrl', PortifolioCtrl);
 })();

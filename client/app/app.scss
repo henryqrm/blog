@@ -8,6 +8,13 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
+ $backgrond-dark: #212121;
+ $backgrond-light: #727272;
+ $text-dark: #C5CAE9;
+ $text-light: #FFFFFF;
+ $main-dark: #3F51B5;
+ $main-light: #5C6BC0;
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,7 +25,14 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'admin/admin.scss';
+@import 'app.variables.sass';
 @import 'main/main.scss';
+@import 'portifolio/1-home/home.sass';
+@import 'portifolio/2-profile/profile.sass';
+@import 'portifolio/3-skills/skills.sass';
+@import 'portifolio/4-contact/contact.sass';
+@import 'portifolio/_variables.sass';
+@import 'portifolio/portifolio.sass';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
