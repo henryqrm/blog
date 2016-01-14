@@ -1,1 +1,37 @@
-<h1>Home</h1>
+<div ng-controller="ProtifolioHomeCtrl" class="portifolio-home">
+  <div layout="column" layout-align="center end" layout-align-xs="center center" layout-align-sm="center center">
+    <ul class="portifolio-home-social" flex>
+      <li>
+        <a href="https://github.com/henryqrm">
+          <div class="icon" style="background-image: url('assets/svg/iconmonstr-github-1.svg');"></div>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/henryqrm">
+          <div class="icon" style="background-image: url('assets/svg/iconmonstr-linkedin-4.svg')"></div>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/HenryQRM-1505992946390356/">
+          <div class="icon" style="background-image: url('assets/svg/iconmonstr-facebook-4.svg')"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div flex>
+    <div class="portifolio-home-line">
+    </div>
+    <div class="portifolio-home-box">
+      <div layout layout-align="center center">
+        <a href="/profile">
+          <div class="portifolio-home-logo">
+            <div class="portifolio-home-logo-svg" style="background-image:url('assets/svg/logo.svg')"></div>
+          </div>
+        </a>
+      </div>
+      <h3>{{name}}</h3>
+      <h4>{{profession}}</h4>
+      <p>"{{text}}"</p>
+    </div>
+  </div>
+</div>

@@ -4,16 +4,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
 
+@import 'app.variables.scss';
+
 /**
  * App-wide Styles
  */
-
- $backgrond-dark: #212121;
- $backgrond-light: #727272;
- $text-dark: #C5CAE9;
- $text-light: #FFFFFF;
- $main-dark: #3F51B5;
- $main-light: #5C6BC0;
+body{
+    overflow: hidden;
+}
+.icon{
+    background-size: cover;
+    width: $icon-size;
+    height: $icon-size;
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -25,15 +28,13 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 // Component styles are injected through grunt
 // injector
 @import 'admin/admin.scss';
-@import 'app.variables.sass';
+@import 'app.variables.scss';
 @import 'main/main.scss';
-@import 'portifolio/1-home/home.sass';
-@import 'portifolio/2-profile/profile.sass';
+@import 'portifolio/1-home/home.scss';
 @import 'portifolio/2-profile/profile.scss';
-@import 'portifolio/3-skills/skills.sass';
-@import 'portifolio/4-contact/contact.sass';
-@import 'portifolio/_variables.sass';
-@import 'portifolio/portifolio.sass';
+@import 'portifolio/3-skills/skills.scss';
+@import 'portifolio/4-contact/contact.scss';
+@import 'portifolio/portifolio.scss';
 @import '../components/footer/footer.scss';
 @import '../components/modal/modal.scss';
 @import '../components/oauth-buttons/oauth-buttons.scss';
