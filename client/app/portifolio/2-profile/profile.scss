@@ -1,31 +1,7 @@
-@function size($_value, $_media) {
-  $_xsPercent: 0.55;
-  $_smPercent: 0.80;
-  $_mdPercent: 1;
-  $_lgPercent: 1.10;
-  $_xlPercent: 1.25;
-  $_percent: 1;
-
-  @if $_media == xs {
-    $_percent: $_xsPercent;
-  }
-  @else if $_media == sm {
-    $_percent: $_smPercent;
-  }
-  @else if $_media == md {
-    $_percent: $_mdPercent;
-  }
-  @else if $_media == lg {
-    $_percent: $_lgPercent;
-  }
-  @else if $_media == xl {
-    $_percent: $_xlPercent;
-  }
-  @return ($_value*$_percent);
-}
 $portifolio_profile_image: 400px;
 $portifolio_profile_font: 25px;
 $portifolio_profile_icon: 40px;
+
 .portifolio-profile-description{
     margin: 30px;
 }

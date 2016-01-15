@@ -5,7 +5,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
 
 @import '_variables.scss';
-
+@import '_functions.scss';
 /**
  * App-wide Styles
  */
@@ -28,6 +28,7 @@ body{
 // Component styles are injected through grunt
 // injector
 @import '_functions.scss';
+@import '_test.scss';
 @import '_variables.scss';
 @import 'admin/admin.scss';
 @import 'main/main.scss';

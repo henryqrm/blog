@@ -1,0 +1,48 @@
+@mixin media($_media) {
+  @if $_media == xs {
+    @media screen and (max-width: $media-xsmall) {
+      @content;
+    }
+  }
+  @else if $_media == sm {
+    @media screen and (min-width: $media-xsmall + 1 ) and (max-width: $media-small) {
+      @content;
+    }
+  }
+  @else if $_media == md {
+    @media screen and (min-width: $media-small + 1 ) and (max-width: $media-medium) {
+      @content;
+    }
+  }
+  @else if $_media == lg {
+    @media screen and (min-width: $media-medium + 1 ) and (max-width: $media-large) {
+      @content;
+    }
+  }
+  @else if $_media == xl {
+    @media screen and (min-width: $media-large + 1 ) {
+      @content;
+    }
+  }
+}
+
+@function size($_value, $_media) {
+  $_percent: 1;
+
+  @if $_media == xs {
+    $_percent: $_xsPercent;
+  }
+  @else if $_media == sm {
+    $_percent: $_smPercent;
+  }
+  @else if $_media == md {
+    $_percent: $_mdPercent;
+  }
+  @else if $_media == lg {
+    $_percent: $_lgPercent;
+  }
+  @else if $_media == xl {
+    $_percent: $_xlPercent;
+  }
+  @return ($_value*$_percent);
+}

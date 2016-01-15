@@ -5,6 +5,10 @@ $image-logo-footer: 50px;
 .portifolio-footer {
   font-size: 15px;
   color: $text-light;
+  p{
+      margin: 0 20px 8px;
+      text-align: center;
+  }
   ul {
     list-style: none;
     display: inline-flex;
