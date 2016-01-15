@@ -1,17 +1,97 @@
-//variables
+@function size($_value, $_media) {
+  $_xsPercent: 0.55;
+  $_smPercent: 0.80;
+  $_mdPercent: 1;
+  $_lgPercent: 1.10;
+  $_xlPercent: 1.25;
+  $_percent: 1;
+
+  @if $_media == xs {
+    $_percent: $_xsPercent;
+  }
+  @else if $_media == sm {
+    $_percent: $_smPercent;
+  }
+  @else if $_media == md {
+    $_percent: $_mdPercent;
+  }
+  @else if $_media == lg {
+    $_percent: $_lgPercent;
+  }
+  @else if $_media == xl {
+    $_percent: $_xlPercent;
+  }
+  @return ($_value*$_percent);
+}
+$portifolio_profile_image: 400px;
+$portifolio_profile_font: 25px;
+$portifolio_profile_icon: 40px;
+.portifolio-profile-description{
+    margin: 30px;
+}
 .portifolio-profile {
+    color: $text-dark;
   img {
-    width: 400px;
-    height: 400px;
-    padding: 5px;
+    width: $portifolio_profile_image;
+    height: $portifolio_profile_image;
     border: 3px solid #FFF;
+    @include media(xs) {
+        width: size($portifolio_profile_image,xs);
+        height: size($portifolio_profile_image,xs);
+    }
+    @include media(sm) {
+        width: size($portifolio_profile_image,sm);
+        height: size($portifolio_profile_image,sm);
+    }
+    @include media(md) {
+        width: size($portifolio_profile_image,md);
+        height: size($portifolio_profile_image,md);
+    }
+    @include media(lg) {
+        width: size($portifolio_profile_image,lg);
+        height: size($portifolio_profile_image,lg);
+    }
+    @include media(xl) {
+        width: size($portifolio_profile_image,xl);
+        height: size($portifolio_profile_image,xl);
+    }
   }
   p {
-    font-size: 25px;
+    font-size: $portifolio_profile_font;
     font-style: italic;
     span {
       padding-right: 10px;
-      font-size: 40px;
+      font-size: $portifolio_profile_icon;
+    }
+    @include media(xs) {
+        font-size: size($portifolio_profile_font,xs);
+        span {
+          font-size: size($portifolio_profile_icon,xs);
+        }
+    }
+    @include media(sm) {
+        font-size: size($portifolio_profile_font,sm);
+        span {
+          font-size: size($portifolio_profile_icon,sm);
+        }
+    }
+    @include media(md) {
+        font-size: size($portifolio_profile_font,md);
+        span {
+          font-size: size($portifolio_profile_icon,md);
+        }
+    }
+    @include media(lg) {
+        font-size: size($portifolio_profile_font,lg);
+        span {
+          font-size: size($portifolio_profile_icon,lg);
+        }
+    }
+    @include media(xl) {
+        font-size: size($portifolio_profile_font,xl);
+        span {
+          font-size: size($portifolio_profile_icon,xl);
+        }
     }
   }
   .md-raised {

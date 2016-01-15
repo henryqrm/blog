@@ -4,7 +4,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import '../bower_components/font-awesome/scss/font-awesome';
 
-@import 'app.variables.scss';
+@import '_variables.scss';
 
 /**
  * App-wide Styles
@@ -27,8 +27,9 @@ body{
 
 // Component styles are injected through grunt
 // injector
+@import '_functions.scss';
+@import '_variables.scss';
 @import 'admin/admin.scss';
-@import 'app.variables.scss';
 @import 'main/main.scss';
 @import 'portifolio/1-home/home.scss';
 @import 'portifolio/2-profile/profile.scss';
