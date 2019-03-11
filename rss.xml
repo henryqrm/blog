@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>npx create-react-blog</title>
-        <link>/</link>
+        <link>/blog</link>
         <description>A clone of Dan Abramov&apos;s overreacted.io using create-react-app-mdx and Navi</description>
-        <lastBuildDate>Mon, 11 Mar 2019 20:33:23 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 11 Mar 2019 22:26:27 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[Congratulations on Your New Blog!]]></title>
-            <link>/posts/2019-01-05/welcome/</link>
-            <guid>/posts/2019-01-05/welcome/</guid>
+            <link>/blog/posts/2019-01-05/welcome/</link>
+            <guid>/blog/posts/2019-01-05/welcome/</guid>
             <pubDate>Sat, 05 Jan 2019 02:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[<div><div><div class="document_logo__23Tly"><img src="/static/media/navi-logo.0f2f9d7f.svg" class="document_logo-navi__22Qxx" alt="logo"/><img src="/static/media/react-logo.5d5d9eef.svg" class="document_logo-react__N8k6i" alt="logo"/></div><h2 id="how-to">How to…</h2><p><strong>To update this post,</strong> edit <code>src/pages/posts/2019-01-05-welcome/document.mdx</code> and save to reload.</p><p><strong>To update the site’s title,</strong> edit the metadata in <code>src/siteMetadata.js</code>.</p><p><strong>To your bio and photo,</strong> edit the Bio component in <code>src/components/Bio.js</code>.</p><p><strong>To change the site’s colors,</strong> edit the <code>:root</code> block in <code>src/index.module.css</code>.</p><p><strong>To create a new post,</strong> add a new directory to <code>src/pages/posts</code> that is prefixed with the new post’s publication date, then create a <code>post.js</code> file inside it:</p><pre><code class="language-jsx" data-language="jsx" data-highlighted-line-numbers=""><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+            <content:encoded><![CDATA[<div><div><div class="document_logo__23Tly"><img src="/blog/static/media/navi-logo.0f2f9d7f.svg" class="document_logo-navi__22Qxx" alt="logo"/><img src="/blog/static/media/react-logo.5d5d9eef.svg" class="document_logo-react__N8k6i" alt="logo"/></div><h2 id="how-to">How to…</h2><p><strong>To update this post,</strong> edit <code>src/pages/posts/2019-01-05-welcome/document.mdx</code> and save to reload.</p><p><strong>To update the site’s title,</strong> edit the metadata in <code>src/siteMetadata.js</code>.</p><p><strong>To your bio and photo,</strong> edit the Bio component in <code>src/components/Bio.js</code>.</p><p><strong>To change the site’s colors,</strong> edit the <code>:root</code> block in <code>src/index.module.css</code>.</p><p><strong>To create a new post,</strong> add a new directory to <code>src/pages/posts</code> that is prefixed with the new post’s publication date, then create a <code>post.js</code> file inside it:</p><pre><code class="language-jsx" data-language="jsx" data-highlighted-line-numbers=""><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   title<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`Learn How To Build This Blog From Scratch`</span></span><span class="token punctuation">,</span>
   tags<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'react'</span><span class="token punctuation">,</span> <span class="token string">'navi'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   spoiler<span class="token punctuation">:</span> <span class="token string">"An online course with loads of live demos and exercises."</span><span class="token punctuation">,</span>
