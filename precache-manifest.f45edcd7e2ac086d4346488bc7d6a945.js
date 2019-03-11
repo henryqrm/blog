@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/blog/static/media/react-logo.5d5d9eef.svg"
   },
   {
-    "revision": "0d02c483e940faf77d02cbd4fa89fe32",
+    "revision": "4b4ca61709819cece79f56c17847b860",
     "url": "/blog/index.html"
   }
 ];
