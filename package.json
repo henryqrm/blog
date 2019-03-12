@@ -47,7 +47,8 @@
     "tslint": "^5.13.1",
     "tslint-clean-code": "^0.2.9",
     "tslint-config-airbnb": "^5.11.1",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "typescript-tslint-plugin": "^0.3.1"
   },
   "jest": {
     "transform": {
