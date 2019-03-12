@@ -37,7 +37,7 @@
         ],
         "max-line-length": [
             true,
-            80
+            90
         ],
         "object-literal-sort-keys": false,
         "newline-per-chained-call": false,
