@@ -2,23 +2,30 @@ import { Route } from 'navi'
 import React from 'react'
 import { Link } from 'react-navi'
 import ArticleMeta from './ArticleMeta'
-import styles from './ArticleSummary.module.css'
+import styled from 'styled-components'
 
 interface ArticleSummaryProps {
   blogRoot: string
   route: Route
 }
 
-function ArticleSummary({ blogRoot, route }: ArticleSummaryProps) {
-  return (
-    <article className={styles.ArticleSummary}>
-      <h2>
-        <Link href={route.url.href}>{route.title}</Link>
-      </h2>
-      <ArticleMeta blogRoot={blogRoot} data={route.data} />
-      <p>{route.data.spoiler}</p>
-    </article>
-  )
-}
+const Title = styled.h2`
+  font-weight: 900;
+  margin-bottom: 0;
+  margin-top: 0;
+  > a {
+    text-decoration: none;
+  }
+`
+
+const ArticleSummary = ({ blogRoot, route }: ArticleSummaryProps) => (
+  <article>
+    <Title>
+      <Link href={route.url.href}>{route.title}</Link>
+    </Title>
+    <ArticleMeta blogRoot={blogRoot} data={route.data} />
+    <p>{route.data.spoiler}</p>
+  </article>
+)
 
 export default ArticleSummary

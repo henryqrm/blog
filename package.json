@@ -14,17 +14,19 @@
     "eject": "react-scripts eject",
     "serve": "navi-scripts serve",
     "lint": "tslint \"src/**/*.ts*\"",
-    "format": "prettier-tslint fix \"src/**/*.{tsx,ts}\"",
+    "format": "prettier-tslint fix \"./src/**/*.ts\"",
     "clean": "rm -f -r -d dist",
     "precommit": "lint-staged",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "q": "prettier-tslint check t.ts"
   },
   "dependencies": {
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
     "@types/react": "16.8.2",
     "@types/react-dom": "16.8.0",
+    "@types/styled-components": "^4.1.12",
     "blueimp-md5": "2.3.0",
     "feed": "2.0.2",
     "gh-pages": "^2.0.1",
@@ -43,6 +45,7 @@
     "react-scripts-mdx": "2.1.4",
     "rimraf": "2.6.2",
     "slugify": "1.3.2",
+    "styled-components": "^4.1.3",
     "ts-node": "7.0.1",
     "tslint": "^5.13.1",
     "tslint-clean-code": "^0.2.9",
@@ -75,11 +78,8 @@
     "bracketSpacing": true,
     "singleQuote": true,
     "jsxBracketSameLine": false,
-    "printWidth": 80,
+    "printWidth": 90,
     "trailingComma": "all"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "lint-staged": {
     "src/**/*.ts*": [

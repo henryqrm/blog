@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactChild, Component, ReactNode } from 'react'
 import { Link, View, useCurrentRoute } from 'react-navi'
 import { MDXProvider } from '@mdx-js/tag'
 import siteMetadata from '../siteMetadata'
@@ -33,7 +33,7 @@ function BlogPostLayout({ blogRoot }: BlogPostLayoutProps) {
           <MDXProvider
             components={{
               a: Link,
-              wrapper: ({ children }) => (
+              wrapper: ({ children }: any) => (
                 <div className={styles.content}>{children}</div>
               ),
             }}>

@@ -1,6 +1,6 @@
 declare module '@mdx-js/tag' {
-  export const MDXTag: any;
-  export const MDXProvider: any;
+  export const MDXTag: any
+  export const MDXProvider: any
 }
 
 declare module '*.mdx' {

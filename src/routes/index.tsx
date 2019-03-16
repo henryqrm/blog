@@ -2,7 +2,7 @@ import { compose, lazy, map, mount, redirect, route, withContext, withView, Rout
 import React from 'react'
 import { join } from 'path'
 import { chunk, fromPairs } from 'lodash'
-import BlogIndexPage from '../components/BlogIndexPage'
+import IndexPage from '../pages/IndexPage'
 import BlogLayout from '../components/BlogLayout'
 import BlogPostLayout from '../components/BlogPostLayout'
 import siteMetadata from '../siteMetadata'
@@ -39,7 +39,7 @@ let chunkPagePairs = chunks.map((chunk, i) => [
     return route({
       title: pageTitle,
       getView: () => (
-        <BlogIndexPage
+        <IndexPage
           blogRoot={context.blogRoot}
           pageNumber={i + 1}
           pageCount={chunks.length}

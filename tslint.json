@@ -1,56 +1,40 @@
 {
-    "extends": [
-        "tslint:all",
-        "tslint-config-airbnb",
-        "tslint-clean-code"
+  "extends": ["tslint:recommended", "tslint-config-airbnb", "tslint-clean-code"],
+  "linterOptions": {
+    "exclude": ["node_modules", "node_modules/**/*", "**/node_modules/**/*"]
+  },
+  "rules": {
+    "ordered-imports": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "member-variable-declaration"
     ],
-    "linterOptions": {
-        "exclude": [
-            "node_modules",
-            "node_modules/**/*",
-            "**/node_modules/**/*"
-        ]
-    },
-    "rules": {
-        "typedef": [
-            true,
-            "call-signature",
-            "parameter",
-            "arrow-parameter",
-            "property-declaration",
-            "member-variable-declaration"
-        ],
-        "max-file-line-count": [
-            true,
-            300
-        ],
-        "variable-name": [
-            true,
-            "ban-keywords",
-            "allow-pascal-case",
-            "check-format",
-            "allow-leading-underscore"
-        ],
-        "semicolon": [
-            true,
-            "never"
-        ],
-        "max-line-length": [
-            true,
-            90
-        ],
-        "object-literal-sort-keys": false,
-        "newline-per-chained-call": false,
-        "member-ordering": false,
-        "interface-name": false,
-        "no-implicit-dependencies": false,
-        "member-access": false,
-        "import-name": false,
-        "no-magic-numbers": false,
-        "no-any": false,
-        "no-default-export": false,
-        "no-var-requires": false,
-        "no-require-imports": false
-    },
-    "autoFixOnSave": true
+    "max-file-line-count": [true, 300],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "allow-pascal-case",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "semicolon": [true, "never"],
+    "max-line-length": [true, 90],
+    "object-literal-sort-keys": false,
+    "newline-per-chained-call": false,
+    "member-ordering": false,
+    "interface-name": false,
+    "no-implicit-dependencies": false,
+    "member-access": false,
+    "import-name": false,
+    "no-magic-numbers": false,
+    "no-any": false,
+    "no-default-export": false,
+    "no-var-requires": false,
+    "no-require-imports": false
+  },
+  "autoFixOnSave": true
 }

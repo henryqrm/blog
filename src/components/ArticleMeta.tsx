@@ -1,50 +1,60 @@
-import { join } from 'path'
+import { formatDate } from '../utils/formats'
 import React from 'react'
 import { Link } from 'react-navi'
-import { formatDate } from '../utils/formats'
-import styles from './ArticleMeta.module.css'
+import { join } from 'path'
+import Tag from './Tag'
+import Tags from './Tags'
 
 interface ArticleMetaProps {
   blogRoot: string
-  data: any
+  data: {
+    date: Date,
+    tags: string[],
+  }
   readingTime?: any
 }
 
-function ArticleMeta({ blogRoot, data, readingTime }: ArticleMetaProps) {
-  let readingTimeElement
-  if (readingTime) {
-    let minutes = Math.max(Math.round(readingTime.minutes), 1)
-    let cups = Math.round(minutes / 5)
-    readingTimeElement = (
-      <React.Fragment>
-        {' '}
-        &bull;{' '}
-        <span className={styles.readingTime}>
-          {new Array(cups || 1).fill('☕️').join('')} {minutes} min read
-        </span>
-      </React.Fragment>
-    )
-  }
+interface ReadingTimeProps {
+  minutes: number
+}
 
+const ReadingTime = ({ minutes }: ReadingTimeProps) => {
+  const MINUTES_PER_CUP = 5
+  const minutesToRead = Math.max(Math.round(minutes), 1)
+  const cups = Math.round(minutesToRead / MINUTES_PER_CUP)
   return (
-    <small className={styles.ArticleMeta}>
+    <>
+      {' '}
+      &bull;{' '}
+      <span>
+        {Array(cups || 1)
+          .fill('☕️')
+          .join(' ')}{' '}
+        {minutesToRead} min read
+      </span>
+    </>
+  )
+}
+
+export default ({ blogRoot, data, readingTime }: ArticleMetaProps) => {
+  return (
+    <small>
       <time dateTime={data.date.toUTCString()}>{formatDate(data.date)}</time>
       {data.tags && data.tags.length && (
         <>
           {' '}
           &bull;{' '}
-          <ul className={styles.tags}>
-            {data.tags.map(tag => (
-              <li key={tag}>
+          <Tags>
+            {data.tags.map((tag: string) => (
+              <Tag key={tag}>
                 <Link href={join(blogRoot, 'tags', tag)}>{tag}</Link>
-              </li>
+              </Tag>
             ))}
-          </ul>
+          </Tags>
         </>
       )}
-      {readingTimeElement || null}
+      {readingTime && <ReadingTime {...readingTime} />}
     </small>
   )
 }
 
-export default ArticleMeta
